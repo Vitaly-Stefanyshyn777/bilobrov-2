@@ -1,0 +1,53 @@
+.filterController {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 1.2vw;
+}
+
+.filterController button {
+  font-family: Manrope;
+  font-weight: 700;
+  font-size: 0.8vw;
+  line-height: 0.8vw;
+  letter-spacing: 0.01vw;
+  gap: 0.5vw;
+  display: flex;
+  align-items: center;
+  transition: color 0.3s;
+}
+
+.filterController button svg {
+  width: 1.2vw;
+  height: 1.2vw;
+  stroke: black;
+  transition: stroke 0.3s;
+}
+
+.filterController button:hover {
+  color: var(--primary);
+}
+
+.filterController button:hover svg {
+  stroke: var(--primary);
+}
+
+.sort {
+  /* додаткові стилі для сортування, якщо потрібно */
+}
+
+@media (max-width: 1024px) {
+  .filterController {
+    margin-top: 8.5vw;
+    margin-bottom: 6.4vw;
+  }
+  .filterController button {
+    font-size: 3.7vw;
+    line-height: 4.2vw;
+    gap: 1.6vw;
+  }
+  .filterController button svg {
+    width: 5.3vw;
+    height: 5.3vw;
+  }
+}

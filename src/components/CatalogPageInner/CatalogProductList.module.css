@@ -1,0 +1,15 @@
+.list {
+  display: grid;
+  grid-template-columns: repeat(5, 1fr);
+  column-gap: 0.7vw;
+  row-gap: 1.6vw;
+  margin-bottom: 3vw;
+}
+
+@media (max-width: 1024px) {
+  .list {
+    grid-template-columns: repeat(2, 1fr);
+    gap: 4.2vw;
+    margin-bottom: 8.5vw;
+  }
+}

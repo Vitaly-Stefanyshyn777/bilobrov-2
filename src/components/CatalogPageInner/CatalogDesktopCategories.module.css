@@ -1,0 +1,33 @@
+.childCategories {
+  margin-top: 1.6vw;
+}
+.childCategories ul {
+  display: flex;
+  justify-content: center;
+  gap: 1.2vw;
+  overflow-x: auto;
+  height: 1.5vw;
+}
+.childCategories li {
+  font-family: Manrope;
+  font-weight: 500;
+  font-size: 1.2vw;
+  line-height: 100%;
+  color: rgba(26, 26, 26, 0.5);
+  transition: 0.3s;
+  cursor: pointer;
+  flex-shrink: 0;
+}
+.childCategories li:hover {
+  color: rgba(26, 26, 26, 1);
+}
+.childCategories .active {
+  font-family: Playfair Display;
+  font-size: 1.2vw;
+  font-style: italic;
+  font-weight: 600;
+  color: black;
+}
+.childCategories a {
+  color: black;
+}

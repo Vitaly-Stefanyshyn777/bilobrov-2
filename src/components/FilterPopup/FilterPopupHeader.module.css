@@ -1,0 +1,22 @@
+.menuHeader {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 1.2vw 2vw 1.2vw 2vw;
+  border-bottom: 1px solid #eee;
+  font-size: 1.2vw;
+  font-weight: 700;
+  background: #fff;
+}
+
+.closeButton {
+  background: none;
+  border: none;
+  font-size: 2vw;
+  cursor: pointer;
+  color: #888;
+  transition: color 0.2s;
+}
+.closeButton:hover {
+  color: #e53935;
+}

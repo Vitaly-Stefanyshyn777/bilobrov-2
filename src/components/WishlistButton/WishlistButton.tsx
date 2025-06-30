@@ -1,0 +1,29 @@
+import React from "react";
+import { useWishlistStore } from "@/store/wishlist/useWishlistState";
+import s from "./WishListBtn.module.css";
+import { HeartIcon } from "../Icon/Icon";
+
+interface WishlistButtonProps {
+  productId: number;
+}
+
+const WishlistButton: React.FC<WishlistButtonProps> = ({ productId }) => {
+  const isInWishlist = useWishlistStore((state) =>
+    state.preferences.includes(productId)
+  );
+  const toggleWishlistItem = useWishlistStore(
+    (state) => state.toggleWishlistItem
+  );
+
+  const handleToggle = () => {
+    toggleWishlistItem(productId);
+  };
+
+  return (
+    <div className={s.wishList} onClick={handleToggle}>
+      <HeartIcon isActive={isInWishlist} />
+    </div>
+  );
+};
+
+export default WishlistButton;

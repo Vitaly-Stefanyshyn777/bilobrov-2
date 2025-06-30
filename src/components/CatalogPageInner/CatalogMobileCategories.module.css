@@ -1,0 +1,58 @@
+.childCategories {
+  margin-top: 1.6vw;
+}
+.childCategories ul {
+  display: flex;
+  justify-content: center;
+  gap: 1.2vw;
+  overflow-x: auto;
+  height: 1.5vw;
+}
+.childCategories li {
+  font-family: Manrope;
+  font-weight: 500;
+  font-size: 1.2vw;
+  line-height: 100%;
+  color: rgba(26, 26, 26, 0.5);
+  transition: 0.3s;
+  cursor: pointer;
+  flex-shrink: 0;
+}
+.childCategories li:hover {
+  color: rgba(26, 26, 26, 1);
+}
+.childCategories .active {
+  font-family: Playfair Display;
+  font-size: 1.2vw;
+  font-style: italic;
+  font-weight: 600;
+  color: black;
+}
+.childCategories a {
+  color: black;
+}
+
+@media (max-width: 1024px) {
+  .childCategories ul {
+    gap: 4.8vw;
+    height: 15vw;
+    justify-content: start;
+    padding-left: 4.3vw;
+    padding-right: 4.3vw;
+  }
+  .childCategories li {
+    font-size: 4.8vw;
+    line-height: 100%;
+  }
+  .childCategories .active {
+    font-size: 4.8vw;
+  }
+  .childCategories ul {
+    -webkit-overflow-scrolling: touch;
+    scrollbar-width: none;
+    -ms-overflow-style: none;
+  }
+  .childCategories ul::-webkit-scrollbar {
+    display: none;
+  }
+}

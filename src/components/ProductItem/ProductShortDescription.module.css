@@ -1,0 +1,16 @@
+.shortDesc {
+  font-family: Manrope, sans-serif;
+  font-size: 0.8vw;
+  font-weight: 600;
+  line-height: 1.1vw;
+  color: rgba(26, 26, 26, 0.4);
+  margin-bottom: 0.8vw;
+}
+
+@media (max-width: 1024px) {
+  .shortDesc {
+    font-size: 3.2vw;
+    line-height: 140%;
+    margin-bottom: 3.2vw;
+  }
+}
