@@ -1,4 +1,3 @@
-// types/categoryShortType.ts
 export interface CategoryShort {
   id: number;
   name: string;

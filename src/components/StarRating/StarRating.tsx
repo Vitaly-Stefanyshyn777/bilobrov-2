@@ -1,5 +1,3 @@
-// потрібно для відображення рейтингу у вигляді зірок
-
 import { StarFullIcon, StarHalfIcon, StarEmptyIcon } from "../Icon/Icon";
 
 export const StarRating = ({
@@ -21,8 +19,6 @@ export const StarRating = ({
 
   return <div className="flex ">{stars}</div>;
 };
-
-// -----------------------------------------------------------------------------------------------------------
 
 export const StarRatingRed = ({
   rating,

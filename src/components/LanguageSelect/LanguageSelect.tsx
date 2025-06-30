@@ -1,4 +1,3 @@
-// незнаю чи потрібно
 import { useState, useRef, useEffect } from "react";
 import { motion, AnimatePresence } from "framer-motion";
 import s from "./LanguageSelect.module.css";

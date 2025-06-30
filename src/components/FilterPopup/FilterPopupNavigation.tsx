@@ -29,10 +29,8 @@ export const useFilterPopupNavigation = ({
   const { allCategories } = useProductFilterStore();
 
   const applyFilters = () => {
-    // Створюємо новий URL з поточними параметрами
     const currentParams = new URLSearchParams(window.location.search);
-    
-    // Оновлюємо параметри фільтрів
+
     currentParams.set("min", localMinPrice.toString());
     currentParams.set("max", localMaxPrice.toString());
     currentParams.set("sale", localOnSale.toString());
@@ -50,7 +48,6 @@ export const useFilterPopupNavigation = ({
       currentParams.delete("brand");
     }
 
-    // Оновлюємо атрибути
     Object.entries(localSelectedAttributes).forEach(([slug, optionIds]) => {
       if (optionIds.length > 0) {
         currentParams.set(`attr_${slug}`, optionIds.join(","));
@@ -59,7 +56,6 @@ export const useFilterPopupNavigation = ({
       }
     });
 
-    // Визначаємо шлях навігації
     let navPathname = "/catalog";
     if (
       localSelectedCategories.length === 1 &&
@@ -74,7 +70,7 @@ export const useFilterPopupNavigation = ({
       }
     }
 
-    // Навігуємо до нового URL
+
     router.push(`${navPathname}?${currentParams.toString()}`);
     onClose();
   };

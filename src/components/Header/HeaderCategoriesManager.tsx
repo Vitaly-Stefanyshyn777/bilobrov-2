@@ -5,7 +5,6 @@ import { useProductFilterStore } from "../../store/filter/useProductFilterStore"
 export const useHeaderCategoriesManager = () => {
   const categories = useProductFilterStore((s) => s.allCategories);
 
-  // Унікальні категорії для меню (без дублікатів по name)
   const menuCategoryNames = useMemo(
     () => [
       "Акції",

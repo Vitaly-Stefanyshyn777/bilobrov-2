@@ -18,20 +18,6 @@ export const useProductsQuery = () => {
     searchQuery,
   } = useProductFilterStore();
 
-  // Логуємо зміни фільтрів
-  console.log("🔍 React Query filters:", {
-    sort,
-    selectedCategories,
-    selectedBrands,
-    onSale,
-    inStock,
-    minPrice,
-    maxPrice,
-    selectedAttributes,
-    page,
-    searchQuery,
-  });
-
   return useQuery({
     queryKey: [
       "products",
@@ -114,7 +100,6 @@ export const useProductsQuery = () => {
       params.set("max_price", maxPrice.toString());
 
       const url = `${API_URL_WC}products?${params.toString()}`;
-      console.log("🔍 API URL:", url);
 
       const response = await axios.get(url, {
         headers: {
@@ -124,20 +109,6 @@ export const useProductsQuery = () => {
 
       const totalCount = parseInt(response.headers["x-wp-total"]);
       const totalPages = parseInt(response.headers["x-wp-totalpages"]);
-
-      console.log("🔍 API Response:", {
-        totalCount,
-        totalPages,
-        productsCount: response.data.length,
-        firstProduct: response.data[0]
-          ? {
-              id: response.data[0].id,
-              name: response.data[0].name,
-              on_sale: response.data[0].on_sale,
-              stock_status: response.data[0].stock_status,
-            }
-          : null,
-      });
 
       return {
         products: response.data,

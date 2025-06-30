@@ -36,7 +36,7 @@ interface ProductFilterStore {
   }[];
   allBrands: Brand[];
 
-  // Actions
+
   setSort: (value: SortOption) => void;
   setSearchQuery: (value: string) => void;
   setSelectedCategories: (value: string[]) => void;

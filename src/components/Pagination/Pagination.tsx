@@ -1,4 +1,3 @@
-// потрібно
 import React from "react";
 import s from "./Pagination.module.css";
 import { ArrowLeftIcon, ArrowRightIcon } from "../Icon/Icon";

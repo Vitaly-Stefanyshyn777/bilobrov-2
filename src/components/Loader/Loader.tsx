@@ -3,7 +3,6 @@ import Lottie from "lottie-react";
 import styled from "styled-components";
 import { useWindowSize } from "../../hooks/useWindowSize";
 
-// ІМПОРТУЄШ Lottie JSON
 import heartAnimation from "./animation-heart.json";
 
 export const Loader = ({ product }: { product?: boolean }) => {

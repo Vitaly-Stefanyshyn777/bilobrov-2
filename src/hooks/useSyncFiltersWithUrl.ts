@@ -1,4 +1,3 @@
-// hooks/useSyncFiltersWithUrl.ts
 import { useEffect } from "react";
 import { useCatalogQueryParams } from "@/hooks/useCatalogQueryParams";
 import { useProductFilterStore } from "@/store/filter/useProductFilterStore";

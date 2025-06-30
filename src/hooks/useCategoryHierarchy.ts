@@ -1,4 +1,3 @@
-// hooks/useCategoryHierarchy.ts
 import { useMemo, useCallback } from "react";
 import { useParams } from "next/navigation";
 import { useProductFilterStore } from "@/store/filter/useProductFilterStore";
@@ -30,9 +29,7 @@ export function useCategoryHierarchy() {
     [allCategories, parentCategory]
   );
 
-  const onTabClick = useCallback(() => {
-    // ваша логіка навігації
-  }, []);
+  const onTabClick = useCallback(() => {}, []);
 
   return { childCategory, parentCategory, childCategories, onTabClick };
 }

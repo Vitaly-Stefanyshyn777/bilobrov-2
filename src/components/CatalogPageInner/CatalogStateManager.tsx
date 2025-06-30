@@ -38,7 +38,6 @@ export const useCatalogStateManager = () => {
     setSelectedAttributes,
   } = useProductFilterStore();
 
-  // Синхронізація стану з URL параметрами
   useEffect(() => {
     if (minPrice !== urlMinPrice) setMinPrice(urlMinPrice);
     if (maxPrice !== urlMaxPrice) setMaxPrice(urlMaxPrice);

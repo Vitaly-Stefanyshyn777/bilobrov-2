@@ -13,8 +13,6 @@ import type { Metadata } from "next";
 import ClientProviders from "@/provaiders/ClientProviders";
 import Providers from "@/providers";
 
-// import ClientProviders from "@/providers/ClientProviders";
-
 const geistSans = Geist({ variable: "--font-geist-sans", subsets: ["latin"] });
 const geistMono = Geist_Mono({
   variable: "--font-geist-mono",
@@ -63,7 +61,6 @@ export default function RootLayout({
           ${raleway.variable}
         `}
       >
-        {/* ⬇️ УСІ клієнтські штуки заховано всередині */}
         <Providers>
           <ClientProviders>{children}</ClientProviders>
         </Providers>

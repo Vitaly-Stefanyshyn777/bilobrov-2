@@ -33,7 +33,6 @@ export const useCatalogQueryParams = (): CatalogQueryParams => {
     const sort = (query.get("sort") || "popularity") as SortOption;
     const page = Number(query.get("page")) || 1;
 
-    // Парсимо атрибути
     const selectedAttributes: Record<string, string[]> = {};
     query.forEach((value, key) => {
       if (key.startsWith("attr_")) {
@@ -53,9 +52,6 @@ export const useCatalogQueryParams = (): CatalogQueryParams => {
       sort,
       page,
     };
-
-    console.log("🔍 useCatalogQueryParams result:", result);
-    console.log("🔍 Raw search params:", searchParams.toString());
 
     return result;
   }, [searchParams]);

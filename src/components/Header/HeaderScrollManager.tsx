@@ -6,7 +6,6 @@ export const useHeaderScrollManager = () => {
   const headerRef = useRef<HTMLElement | null>(null);
   const lastScrollY = useRef(0);
 
-  // Відстеження скролу для зміни стану
   useEffect(() => {
     const handleScroll = () => {
       if (window.scrollY > 100) {
@@ -20,7 +19,6 @@ export const useHeaderScrollManager = () => {
     return () => window.removeEventListener("scroll", handleScroll);
   }, []);
 
-  // Анімація приховування/показу хедера при скролі
   useEffect(() => {
     const headerEl = headerRef.current;
     if (!headerEl) return;

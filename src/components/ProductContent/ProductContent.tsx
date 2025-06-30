@@ -5,7 +5,7 @@ import { ProductName } from "./ProductName";
 import { ProductShortDescription } from "./ProductShortDescription";
 import { ProductPriceBlock } from "./ProductPriceBlock";
 import { ProductAvailabilityBlock } from "./ProductAvailabilityBlock";
-import { ProductAuthBlock } from "./ProductAuthBlock";
+
 import s from "./ProductContent.module.css";
 
 interface ProductItemProps {
@@ -13,10 +13,7 @@ interface ProductItemProps {
   openRegister: () => void;
 }
 
-export const ProductContent: React.FC<ProductItemProps> = ({
-  info,
-  openRegister,
-}) => {
+export const ProductContent: React.FC<ProductItemProps> = ({ info }) => {
   const brandName = info.brands[0]?.name || "";
 
   if (!info.attributes) return <p>Loading...</p>;
@@ -32,7 +29,6 @@ export const ProductContent: React.FC<ProductItemProps> = ({
       <ProductShortDescription desc={info.short_description} />
       <ProductPriceBlock info={info} />
       <ProductAvailabilityBlock stock={info.stock_quantity} sku={info.sku} />
-      <ProductAuthBlock onAuth={openRegister} />
     </div>
   );
 };

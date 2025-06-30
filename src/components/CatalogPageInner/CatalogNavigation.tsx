@@ -46,8 +46,6 @@ export const useCatalogNavigation = () => {
   }, [parentCategory, allCategories]);
 
   const onTabClick = (categoryId: number, categorySlug: string) => {
-    console.log("🎯 onTabClick called with:", { categoryId, categorySlug });
-
     const clickedCategory = allCategories.find(
       (cat: CategoryShort) => cat.id === categoryId
     );
@@ -66,12 +64,10 @@ export const useCatalogNavigation = () => {
     currentParams.set("categories", categoryId.toString());
 
     const newUrl = `${fullSlugPath}?${currentParams.toString()}`;
-    console.log("🔄 Navigating to:", newUrl);
 
     router.push(newUrl);
   };
 
-  // Синхронізація категорій з URL
   useEffect(() => {
     if (allCategories.length === 0) return;
 
@@ -102,7 +98,6 @@ export const useCatalogNavigation = () => {
     setSelectedCategories,
   ]);
 
-  // Спеціальні сторінки
   useEffect(() => {
     if (slug === "sales") {
       setOnSale(true);

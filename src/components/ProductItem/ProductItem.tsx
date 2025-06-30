@@ -45,7 +45,6 @@ export const ProductItem: React.FC<ProductItemProps> = ({
           (info.stock_quantity ?? 0) < 1 && s.notAvailable
         } `}
       >
-        {/* <Link className={s.link} href={`/product/${info.slug}/${info.id}`} /> */}
         <div className={s.block}>
           <ProductImage info={info} />
           <ProductMarkers info={info} />

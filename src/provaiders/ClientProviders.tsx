@@ -9,9 +9,7 @@ import { AnimatePresence } from "framer-motion";
 import "@/utils/i18n";
 
 const MenuPopup = dynamic(() => import("@/components/MenuPopup/MenuPopup"));
-// const SearchPopup = dynamic(
-//   () => import("@/components/SearchPopup/SearchPopup")
-// );
+
 const WishListPopup = dynamic(
   () => import("@/components/WishListPopup/WishListPopup")
 );
@@ -33,12 +31,8 @@ function InnerProviders({ children }: { children: ReactNode }) {
   return (
     <>
       <Header
-        // openCart={() => {}}
         openRegister={openRegister}
         openWishList={() => setWishOpen(true)}
-        // openSearch={() => {
-        //   setSearchOpen(true);
-        // }}
       />
 
       {children}

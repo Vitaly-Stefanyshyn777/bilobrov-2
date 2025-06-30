@@ -1,4 +1,3 @@
-// покіщо потрібно, але пізніше потрібно видалити зробити заглушку
 import { useState } from "react";
 import s from "./MailingFormBlock.module.css";
 import { useTranslation } from "react-i18next";

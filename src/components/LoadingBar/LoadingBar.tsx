@@ -1,4 +1,3 @@
-// потрібно;
 import s from "./LoadingBar.module.css"; // Додамо стилі для анімації
 
 const LoadingBar = () => {

@@ -1,5 +1,3 @@
-// потрібно;
-
 import s from "./FooterNavigationBlock.module.css";
 import { useTranslation } from "react-i18next";
 

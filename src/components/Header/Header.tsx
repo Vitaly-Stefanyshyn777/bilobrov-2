@@ -17,7 +17,6 @@ import {
   HeaderLogoDesktop,
 } from "../Icon/Icon";
 
-// Імпорт нових хуків
 import { useHeaderScrollManager } from "./HeaderScrollManager";
 import { useHeaderCategoriesManager } from "./HeaderCategoriesManager";
 import { useHeaderClassManager } from "./HeaderClassManager";
@@ -36,7 +35,6 @@ export const Header: React.FC<HeaderProps> = ({
   const { width } = useWindowSize();
   const isMobile = width < 1024;
 
-  // Використання нових хуків
   const { isScrolled, headerRef } = useHeaderScrollManager();
   const { uniqueCategories } = useHeaderCategoriesManager();
   const { headerClass, headerTopLineClass, leftButtonsClass } =
@@ -103,7 +101,6 @@ export const Header: React.FC<HeaderProps> = ({
           <div className={`${s.headerBottomLine} `}>
             <nav>
               <ul className={s.navMenu}>
-                {/* Категорії */}
                 {uniqueCategories.map((cat) => (
                   <li className={s.menuItem} key={cat.id}>
                     <Link href={`/catalog/${cat.slug}`} className={s.menuLink}>
@@ -116,7 +113,6 @@ export const Header: React.FC<HeaderProps> = ({
           </div>
         )}
 
-        {/* Root-категорії (parent === 0) у хедері, але тільки вибрані */}
         <nav className={s.categoriesNav} style={{ marginTop: "16px" }}>
           <ul
             className={s.navMenu}

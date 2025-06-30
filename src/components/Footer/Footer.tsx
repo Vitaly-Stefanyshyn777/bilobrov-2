@@ -1,4 +1,3 @@
-// потрібно
 "use client";
 
 import s from "./Footer.module.css";
@@ -14,8 +13,6 @@ import { FooterBottomBlock } from "./FooterBottomBlock";
 import { FooterNavigationBlock } from "./FooterNavigationBlock/FooterNavigationBlock";
 import { FooterInstList } from "./FooterInstList/FooterInstList";
 import { Layout } from "../Layout/Layout";
-
-// import { MailingFormBlock } from "../MailingFormBlock copy/MailingFormBlock";
 
 export const Footer = () => {
   const pathname = usePathname();

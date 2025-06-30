@@ -8,14 +8,9 @@ import { useBrandsQuery } from "@/queries/useBrandsQuery";
 import { useAttributesQuery } from "@/queries/useAttributesQuery";
 
 export const useCatalogDataFetcher = () => {
-  const {
-    setAllBrands,
-    setAllCategories,
-    setBrands,
-    setAttributes,
-  } = useProductFilterStore();
+  const { setAllBrands, setAllCategories, setBrands, setAttributes } =
+    useProductFilterStore();
 
-  // Отримання категорій
   const { data: categoriesData } = useQuery({
     queryKey: ["categories"],
     queryFn: async () => {
@@ -34,22 +29,18 @@ export const useCatalogDataFetcher = () => {
 
   useEffect(() => {
     if (categoriesData) setAllCategories(categoriesData);
-    console.log(categoriesData);
   }, [categoriesData, setAllCategories]);
 
-  // Отримання брендів
   const { data: brandsData } = useBrandsQuery();
   useEffect(() => {
     if (brandsData?.items) setBrands(brandsData.items);
   }, [brandsData, setBrands]);
 
-  // Отримання атрибутів
   const { data: attributesData } = useAttributesQuery();
   useEffect(() => {
     if (attributesData) setAttributes(attributesData);
   }, [attributesData, setAttributes]);
 
-  // Встановлення всіх брендів
   useEffect(() => {
     if (brandsData && brandsData.length > 0) {
       setAllBrands(brandsData);
