@@ -1,10 +1,6 @@
 // потрібно
 "use client";
 
-import { FooterInstList } from "../FooterInstList/FooterInstList";
-import { FooterNavigationBlock } from "../FooterNavigationBlock/FooterNavigationBlock";
-import { Layout } from "../Layout/Layout";
-
 import s from "./Footer.module.css";
 import { useWindowSize } from "../../hooks/useWindowSize";
 import { usePathname } from "next/navigation";
@@ -15,6 +11,9 @@ import { FooterSupportBlock } from "./FooterSupportBlock";
 import { FooterLogo } from "./FooterLogo";
 import { FooterPaymentBlock } from "./FooterPaymentBlock";
 import { FooterBottomBlock } from "./FooterBottomBlock";
+import { FooterNavigationBlock } from "./FooterNavigationBlock/FooterNavigationBlock";
+import { FooterInstList } from "./FooterInstList/FooterInstList";
+import { Layout } from "../Layout/Layout";
 
 // import { MailingFormBlock } from "../MailingFormBlock copy/MailingFormBlock";
 

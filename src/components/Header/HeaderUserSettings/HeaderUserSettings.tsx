@@ -2,7 +2,7 @@
 import s from "./HeaderUserSettings.module.css";
 import { useEffect, useState } from "react";
 import { useWishlistStore } from "@/store/wishlist/useWishlistState";
-import { UserIcon, HeartIcon, CartIcon } from "../Icon/Icon";
+import { CartIcon, HeartIcon, UserIcon } from "@/components/Icon/Icon";
 
 interface HeaderUserSettingsProps {
   openRegister: React.Dispatch<React.SetStateAction<boolean>>;

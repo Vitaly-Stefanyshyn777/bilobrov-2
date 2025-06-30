@@ -1,36 +1,93 @@
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
+# Bilobrov Next.js E-commerce
+
+This is a modern e-commerce project based on [Next.js](https://nextjs.org/) using Zustand, React Query, TypeScript, TailwindCSS, and more. The project implements a product catalog with filters, wishlist, pagination, multilingual support, and responsive design.
+
+## Features
+
+- **Product catalog** with filters by categories, brands, price, availability, sales, and attributes.
+- **Wishlist:** add/remove products, persist in localStorage, quick view of favorite products.
+- **Product search and sorting.**
+- **Pagination** and smooth navigation.
+- **Responsive design** for mobile and desktop.
+- **Multilingual support** (i18next).
+- **Centralized SVG icons.**
+- **Modern architecture:** component splitting, Zustand for state management, React Query for API.
+
+## Project Structure
+
+```
+src/
+  app/                # Next.js pages (catalog, dynamic routes)
+  components/         # UI components (Catalog, ProductItem, FilterPopup, WishListPopup, Header, Footer, etc.)
+  store/              # Zustand stores (wishlist, filters, products)
+  hooks/              # Custom React hooks
+  utils/              # Helper functions
+  types/              # TypeScript types
+  queries/            # React Query hooks for API
+  styles/             # Global styles
+```
+
+### Main Components
+
+- **CatalogPageInner** — main catalog page with filters, product list, pagination.
+- **FilterPopup** — modal window with filters (categories, brands, price, attributes).
+- **WishListPopup** — modal window with favorite products, ability to clear the list.
+- **ProductItem** — product card with info, rating, price.
+- **Header/Footer** — site header and footer with navigation, languages, icons.
+
+### Pages
+
+- `/` — main catalog page.
+- `/catalog/[slug]` — category page.
+- `/catalog/[slug]/[parentSlug]` — subcategory page.
+- `/catalog/[slug]/[parentSlug]/[childSlug]` — nested subcategory page.
 
 ## Getting Started
 
-First, run the development server:
+1. **Install dependencies:**
 
-```bash
-npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
-```
+   ```bash
+   pnpm install
+   # or
+   npm install
+   # or
+   yarn install
+   ```
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+2. **Run the dev server:**
 
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
+   ```bash
+   pnpm dev
+   # or
+   npm run dev
+   # or
+   yarn dev
+   ```
 
-This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
+3. Open [http://localhost:3000](http://localhost:3000) in your browser.
 
-## Learn More
+## Technologies
 
-To learn more about Next.js, take a look at the following resources:
+- **Next.js 15**
+- **React 19**
+- **TypeScript**
+- **Zustand** — state management
+- **React Query** — API data fetching
+- **TailwindCSS** — styling
+- **i18next** — internationalization
+- **Framer Motion** — animations
+- **Formik, Yup** — forms and validation
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+## Customization
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
+- To change menu categories, edit the `menuCategoryNames` array in `HeaderCategoriesManager.tsx`.
+- To add new filters, extend the Zustand store in `useProductFilterStore.ts`.
 
-## Deploy on Vercel
+## Authors
 
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
+- [@bilobrov](https://github.com/bilobrov)
+- [@vitalikstefanisin](https://github.com/vitalikstefanisin)
 
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
+---
+
+**P.S.** If you need more detailed documentation for components or API — feel free to ask!

@@ -2,7 +2,7 @@
 
 import { Layout } from "../Layout/Layout";
 import s from "./Header.module.css";
-import { HeaderUserSettings } from "../HeaderUserSettings/HeaderUserSettings";
+
 import { useWindowSize } from "../../hooks/useWindowSize";
 import "./Header.css";
 import { LanguageSelect } from "../LanguageSelect/LanguageSelect";
@@ -22,23 +22,28 @@ import { useHeaderScrollManager } from "./HeaderScrollManager";
 import { useHeaderCategoriesManager } from "./HeaderCategoriesManager";
 import { useHeaderClassManager } from "./HeaderClassManager";
 import { useHeaderContent } from "./HeaderContent";
+import { HeaderUserSettings } from "./HeaderUserSettings/HeaderUserSettings";
 
 interface HeaderProps {
   openWishList: () => void;
   openRegister: React.Dispatch<React.SetStateAction<boolean>>;
 }
 
-export const Header: React.FC<HeaderProps> = ({ openWishList, openRegister }) => {
+export const Header: React.FC<HeaderProps> = ({
+  openWishList,
+  openRegister,
+}) => {
   const { width } = useWindowSize();
   const isMobile = width < 1024;
 
   // Використання нових хуків
   const { isScrolled, headerRef } = useHeaderScrollManager();
   const { uniqueCategories } = useHeaderCategoriesManager();
-  const { headerClass, headerTopLineClass, leftButtonsClass } = useHeaderClassManager({
-    isMobile,
-    isScrolled,
-  });
+  const { headerClass, headerTopLineClass, leftButtonsClass } =
+    useHeaderClassManager({
+      isMobile,
+      isScrolled,
+    });
   const {
     showFreeDeliveryBanner,
     showSearchButton,
