@@ -2,8 +2,6 @@ import React from "react";
 import { useWishlistStore } from "@/store/wishlist/useWishlistState";
 import s from "./WishListBtn.module.css";
 import { HeartIcon } from "../Icon/Icon";
-import { shallow } from "zustand/shallow";
-import { useStore } from "zustand";
 
 interface WishlistButtonProps {
   productId: number;
