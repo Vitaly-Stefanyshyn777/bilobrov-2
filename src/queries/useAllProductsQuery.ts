@@ -13,12 +13,13 @@ import {
 export const useProductsQuery = () =>
   useQuery({ queryKey: ["products"], queryFn: fetchProducts });
 
-export const useCartProductsQuery = (ids: number[]) =>
-  useQuery({
+export const useCartProductsQuery = (ids: number[]) => {
+  return useQuery({
     queryKey: ["cartProducts", ids],
     queryFn: () => fetchCartProducts(ids),
     enabled: ids.length > 0,
   });
+};
 
 export const useProductQuery = (id: number) =>
   useQuery({

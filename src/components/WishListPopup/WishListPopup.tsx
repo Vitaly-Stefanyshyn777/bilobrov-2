@@ -2,7 +2,6 @@ import s from "./WishListPopup.module.css";
 import { motion } from "framer-motion";
 import { useWindowSize } from "../../hooks/useWindowSize";
 import { useCartProductsQuery } from "@/queries/useAllProductsQuery";
-import { Loader } from "../Loader/Loader";
 import "./WishList.css";
 import { useWishlistStore } from "@/store/wishlist/useWishlistState";
 import type { WishlistState } from "@/store/wishlist/useWishlistState";
@@ -50,7 +49,7 @@ const WishListPopup: React.FC<{ onClose: () => void }> = ({ onClose }) => {
         />
 
         {loading ? (
-          <Loader />
+          <p style={{ color: "red" }}>Loading...</p>
         ) : cartProducts.length > 0 ? (
           <WishListContent
             products={cartProducts}

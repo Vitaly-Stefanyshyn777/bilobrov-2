@@ -134,6 +134,9 @@
 .tabItem:hover {
   text-decoration: underline;
 }
+.emptyWishlist {
+  color: red;
+}
 
 .activeTab {
   font-family: var(--font-playfair) !important;
